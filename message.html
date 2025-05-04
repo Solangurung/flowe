@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Special Message</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .message-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            color: white;
+            flex-direction: column;
+            padding: 20px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+        
+        .message-content {
+            max-width: 600px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        
+        .back-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: #3f05ac;
+            color: rgb(124, 13, 13);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+        
+        .back-button:hover {
+            background: #5d3a9e;
+            transform: scale(1.05);
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        h1 {
+            color: #e0a3ff;
+            margin-bottom: 20px;
+        }
+        
+        p {
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <audio id="bg-music" loop autoplay>
+        <source src="audio/WhatsApp Audio 2025-05-03 at 21.07.40_0b34f718.mp3/" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    
+    <div class="message-container">
+        <P class="message-content">
+            <h1>SORRY MERO MUTU KO TUKRA</h1>
+            <p>Babe kasri banu their  Nothing inside my heart🫀 🥺 abo ka garnu afai niski halcha taa 🥺 Babe bimar bhai rako bela mah  i just ruin your mood 🥺I am extremely sorry babe .
+                🥺🫀I created a lot of things inside your heart hola tra babe i nothing hiding you their nothing I take swear of my mother babe and i will always be with you whatever happens I will Babe 💗 🥺😔</p>  
+                🥺😔 Extremely sorry Babe 🫶🫀
+                <P>🫶🫀Mero janu i love you a lot 🥹 buriiiiiiii </P>
+                <P>🫶 TAKE CARE BABE🫶</p>
+            <p>Love you so much babe 🥹</p>
+            <button class="back-button" onclick="window.location.href='index.html'">Back to Flowers</button>
+        </div>
+    </div>
+</body>
+</html>
