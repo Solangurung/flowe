@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>8 Months of Us 💖</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
       margin: 0;
@@ -17,11 +18,13 @@
       color: #db2777;
       margin: 30px 0 10px;
       font-size: 2.5rem;
+      text-align: center;
     }
 
     .slideshow {
-      width: 600px;
-      height: 550px;
+      width: 90%;
+      max-width: 600px;
+      height: 75vh;
       position: relative;
       border-radius: 16px;
       overflow: hidden;
@@ -54,9 +57,10 @@
       width: 100%;
       background: rgba(0, 0, 0, 0.6);
       color: #fff;
-      padding: 16px;
-      font-size: 1.2rem;
+      padding: 12px;
+      font-size: 1.1rem;
       box-sizing: border-box;
+      text-align: center;
     }
 
     .audio {
@@ -78,12 +82,18 @@
       z-index: 9999;
       transition: opacity 1s ease;
       cursor: pointer;
+      padding: 20px;
+      #intro-screen {
+  transition: opacity 0.3s ease; /* originally 1s, reduce this */
+}
+
     }
 
     #intro-screen h1 {
-      font-size: 2em;
+      font-size: 1.8rem;
       color: #d63384;
       animation: pulse 1.5s infinite;
+      text-align: center;
     }
 
     @keyframes pulse {
@@ -95,6 +105,25 @@
     .hidden {
       opacity: 0;
       pointer-events: none;
+    }
+
+    /* Responsive text */
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.8rem;
+        margin: 20px 0 8px;
+      }
+      .caption {
+        font-size: 1rem;
+        padding: 10px;
+      }
+    }
+
+    @media (max-width: 360px) {
+      .caption {
+        font-size: 0.95rem;
+        padding: 8px;
+      }
     }
   </style>
 </head>
@@ -139,12 +168,12 @@
     </div>
     <div class="slide">
       <img src="./img/WhatsApp Image 2025-05-09 at 21.01.39_9092134c.jpg" alt="8">
-      <div class="caption">You turn my ordinary day into unforgettable mermories Babe </div>
+      <div class="caption">You turn my ordinary day into unforgettable memories Babe</div>
     </div>
     <div class="slide">
       <img src="./img/bb28faa2e72e6c3d90d7037ec66367f7 (1).jpg" alt="9">
       <div class="caption">
-        I LOVE YOU A LOT MY PRINCESS💍
+        I LOVE YOU A LOT MY PRINCESS💍<br/>
         <p>Happy 8 months of togetherness Janu🫀</p>
       </div>
     </div>
@@ -169,7 +198,7 @@
     }
 
     function startSlideshow() {
-      setInterval(nextSlide, 5000);
+      setInterval(nextSlide, 6000);
     }
 
     const intro = document.getElementById('intro-screen');
@@ -179,17 +208,17 @@
     const title = document.getElementById('title');
 
     intro.addEventListener('click', () => {
-      // Fade out intro screen
       intro.classList.add('hidden');
-      setTimeout(() => {
-        intro.style.display = 'none';
-        // Show actual content
-        title.style.display = 'block';
-        slideshow.style.display = 'block';
-        audioDiv.style.display = 'block';
-        audio.play().catch(e => console.log('Audio play error:', e));
-        startSlideshow();
-      }, 1000);
+    setTimeout(() => {
+  intro.style.display = 'none';
+title.style.display = 'block';
+slideshow.style.display = 'block';
+audioDiv.style.display = 'block';
+audio.play().catch(e => console.log('Audio play error:', e));
+startSlideshow();
+
+}, 100);
+
     });
   </script>
 
